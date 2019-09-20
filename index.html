@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>PIGLATIN TRANSLATOR</title>
+</head>
+<body>
+    <div class='container bg-dark  p-4 mt-3 mb-2 text-white '>
+      <div class='row '>
+         <p class=' col-9 pl-2'>TRANSLATE ENGLISH SENTENCE TO PIG LATIN SENTENCE</p>
+         <form class='col-md-12 py-3 text-success'>
+            <div class="form-group">
+                <label for="decimal">ENTER ANY WORD OR SENTENCE:</label>
+                <textarea id='engWord' class='form-control'></textarea>
+              </div>
+              <div class="form-group ">
+                <div id='after' class=" pb-2"><img src='pig2.png'/></div>
+                <div id="piglatin" class='form-control'></div>
+              </div>
+              <button type="button" id='btn' class="btn btn-warning text-white font-weight-bolder col-sm-12 col-md-6 text-nowrap">TRANSLATE</button>
+         </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
