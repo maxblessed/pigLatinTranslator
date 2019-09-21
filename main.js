@@ -12,7 +12,7 @@
 
                   for(let i=1; i<item.length; i++){
                         if(item[i].match(vowel)){
-                            pigLatin.push(item+'ay');
+                            pigLatin.push(item.substrin(i)+item.substring(0,i)+'ay');
                             return;
                         }else if(item[i].match(vowel)===null&&i===item.length-1)
                         {
