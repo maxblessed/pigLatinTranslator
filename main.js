@@ -2,33 +2,28 @@
 
      function pigLatinTranslator(str){
             let vowel=/[aeiouAEIOU]/;
-            let pigLatin=[];
             let arr=str.split(' ');
-            arr.map(function(item){
-                  if(item[0].match(vowel)){
-                      pigLatin.push(item+'way');
-                      return ;
-                  }
+            let pigLatin=arr.map(function(item){
+                if(item[0].match(vowel)){
+                    return item+'-way';
+                }
 
-                  for(let i=1; i<item.length; i++){
-                        if(item[i].match(vowel)){
-                            pigLatin.push(item.substrin(i)+item.substring(0,i)+'ay');
-                            return;
-                        }else if(item[i].match(vowel)===null&&i===item.length-1)
-                        {
-                            pigLatin.push(item+'ay');
-                            return;
-                        }
-                  }
+                for(let i=1; i<item.length; i++){
+                    if(item[i].match(vowel)){
+                        return item.substring(i)+item.substring(0,i)+'-ay';
+                    }else if(item[i].match(vowel)===null&&i===item.length-1){
+                        return item+'-ay';
+                    }
+                }
             })
-            return pigLatin.join(' ');
+          return pigLatin.join(' ');
      }
-
+  
      function id(id){
-          return document.getElementById(id);
+         return document.getElementById(id);
      }
-
+    
      id('btn').onclick=function(){
-         id('piglatin').innerHTML=pigLatinTranslator(id('engWord').value);
+         id('piglatin').innerHTML=pigLatinTranslator(id('engWord').value)
      }
 }())
